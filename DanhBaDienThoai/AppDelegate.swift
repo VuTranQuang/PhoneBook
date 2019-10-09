@@ -16,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let tableVC = TableViewController()
+        
+        tableVC.title = "Contacts"
+        let navi = UINavigationController(rootViewController: tableVC)
+//        UIApplication.shared.statusBarStyle = .lightContent
+        
+//        var darkMode = false
+//        var preferredStatusBarStyle : UIStatusBarStyle {
+//            return darkMode ? .default : .lightContent
+//        }
+        self.window?.rootViewController = navi
+        self.window?.makeKeyAndVisible()
         return true
     }
 
